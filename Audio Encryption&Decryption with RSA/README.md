@@ -11,16 +11,19 @@ This project demonstrates the use of the RSA encryption algorithm, combined with
 
 The project is implemented in MATLAB and demonstrates key concepts in cryptography, including key generation, modular exponentiation, and CRT-based optimization.
 
+
 ## Files and Directory Structure
 
-- `key_generation.m`: MATLAB script for generating RSA keys and CRT parameters.
-- `encrypt_audio.m`: MATLAB script for encrypting the audio file.
-- `decrypt_audio.m`: MATLAB script for decrypting the encrypted audio file.
-- `audios/audio_Original.wav`: The original audio file to be encrypted.
-- `audios/audio_Enc.wav`: The encrypted audio file.
-- `audios/audio_Dec.wav`: The decrypted audio file, which should resemble the original.
-- `plots/audio_signals.png`: Plot of the original and encrypted audio signals.
-- `plots/decrypted_signal.png`: Plot of the decrypted audio signal.
+- **`key_generation.m`**: Script for generating RSA keys.
+- **`encrypt_audio.m`**: Script for encrypting the audio file.
+- **`decrypt_audio.m`**: Script for decrypting the audio file.
+- **`egcd.m`**: Function for computing the extended greatest common divisor.
+- **`modExp.m`**: Function for modular exponentiation.
+- **`audios/audio_Original.wav`**: The original audio file.
+- **`audios/audio_Enc.wav`**: The encrypted audio file.
+- **`audios/audio_Dec.wav`**: The decrypted audio file.
+- **`plots/encrypted_audio_plot.png`**: Plot of the original and encrypted audio signals.
+- **`plots/decrypted_audio_plot.png`**: Plot of the encrypted and decrypted audio signals.
 - `README.md`: This file.
 
 ## Prerequisites
@@ -93,7 +96,7 @@ The Chinese Remainder Theorem is a method used to solve systems of simultaneous 
 
 #### Modular Exponentiation Complexity
 
-- The `modExp` function used for both encryption and decryption relies on exponentiation by squaring, which has a time complexity of $\( O(\log \text{exp}) \)$, where `exp` is the exponent.
+- The `modExp` function used for both encryption and decryption relies on exponentiation by squaring, which has a time complexity of $\( O(\log\( \text{exp}\)) \)$, where `exp` is the exponent.
 
 ## How to Use
 
